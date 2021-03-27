@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - lcov.info - app/app.dart</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">app</a> - app.dart<span style="font-size: 80%;"> (source / <a href="app.dart.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">lcov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntryLo">73.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2019-12-23 22:47:14</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntryHi">-</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : import 'package:flutter/widgets.dart';</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span>            : import '../page/index.dart';
+<span class="lineNum">       4 </span>            : import '../theme/index.dart';
+<span class="lineNum">       5 </span>            : 
+<span class="lineNum">       6 </span>            : const TextStyle _defaultTextStyle = const TextStyle(
+<span class="lineNum">       7 </span>            :   color: Color(0xFF000000),
+<span class="lineNum">       8 </span>            :   fontFamily: 'Roboto',
+<span class="lineNum">       9 </span>            :   fontSize: 16.0,
+<span class="lineNum">      10 </span>            :   decoration: TextDecoration.none,
+<span class="lineNum">      11 </span>            : );
+<span class="lineNum">      12 </span>            : 
+<span class="lineNum">      13 </span>            : class LEApp extends StatefulWidget {
+<span class="lineNum">      14 </span><span class="lineCov">          9 :   const LEApp({</span>
+<span class="lineNum">      15 </span>            :     Key key,
+<span class="lineNum">      16 </span>            :     this.navigatorKey,
+<span class="lineNum">      17 </span>            :     this.home,
+<span class="lineNum">      18 </span>            :     this.routes = const &lt;String, WidgetBuilder&gt;{},
+<span class="lineNum">      19 </span>            :     this.initialRoute,
+<span class="lineNum">      20 </span>            :     this.onGenerateRoute,
+<span class="lineNum">      21 </span>            :     this.onUnknownRoute,
+<span class="lineNum">      22 </span>            :     this.navigatorObservers = const &lt;NavigatorObserver&gt;[],
+<span class="lineNum">      23 </span>            :     this.builder,
+<span class="lineNum">      24 </span>            :     this.title = '',
+<span class="lineNum">      25 </span>            :     this.onGenerateTitle,
+<span class="lineNum">      26 </span>            :     this.color,
+<span class="lineNum">      27 </span>            :     this.theme,
+<span class="lineNum">      28 </span>            :     this.locale,
+<span class="lineNum">      29 </span>            :     this.localizationsDelegates,
+<span class="lineNum">      30 </span>            :     this.localeListResolutionCallback,
+<span class="lineNum">      31 </span>            :     this.localeResolutionCallback,
+<span class="lineNum">      32 </span>            :     this.supportedLocales = const &lt;Locale&gt;[Locale('en', 'US')],
+<span class="lineNum">      33 </span>            :     this.showPerformanceOverlay = false,
+<span class="lineNum">      34 </span>            :     this.checkerboardRasterCacheImages = false,
+<span class="lineNum">      35 </span>            :     this.checkerboardOffscreenLayers = false,
+<span class="lineNum">      36 </span>            :     this.showSemanticsDebugger = false,
+<span class="lineNum">      37 </span>            :     this.debugShowCheckedModeBanner = true,
+<span class="lineNum">      38 </span><span class="lineNoCov">          0 :   })  : assert(routes != null),</span>
+<span class="lineNum">      39 </span><span class="lineNoCov">          0 :         assert(navigatorObservers != null),</span>
+<span class="lineNum">      40 </span><span class="lineNoCov">          0 :         assert(title != null),</span>
+<span class="lineNum">      41 </span><span class="lineNoCov">          0 :         assert(showPerformanceOverlay != null),</span>
+<span class="lineNum">      42 </span><span class="lineNoCov">          0 :         assert(checkerboardRasterCacheImages != null),</span>
+<span class="lineNum">      43 </span><span class="lineNoCov">          0 :         assert(checkerboardOffscreenLayers != null),</span>
+<span class="lineNum">      44 </span><span class="lineNoCov">          0 :         assert(showSemanticsDebugger != null),</span>
+<span class="lineNum">      45 </span><span class="lineNoCov">          0 :         assert(debugShowCheckedModeBanner != null),</span>
+<span class="lineNum">      46 </span><span class="lineCov">          9 :         super(key: key);</span>
+<span class="lineNum">      47 </span>            : 
+<span class="lineNum">      48 </span>            :   final GlobalKey&lt;NavigatorState&gt; navigatorKey;
+<span class="lineNum">      49 </span>            : 
+<span class="lineNum">      50 </span>            :   final Widget home;
+<span class="lineNum">      51 </span>            : 
+<span class="lineNum">      52 </span>            :   final Map&lt;String, WidgetBuilder&gt; routes;
+<span class="lineNum">      53 </span>            : 
+<span class="lineNum">      54 </span>            :   final String initialRoute;
+<span class="lineNum">      55 </span>            : 
+<span class="lineNum">      56 </span>            :   final RouteFactory onGenerateRoute;
+<span class="lineNum">      57 </span>            : 
+<span class="lineNum">      58 </span>            :   final RouteFactory onUnknownRoute;
+<span class="lineNum">      59 </span>            : 
+<span class="lineNum">      60 </span>            :   final List&lt;NavigatorObserver&gt; navigatorObservers;
+<span class="lineNum">      61 </span>            : 
+<span class="lineNum">      62 </span>            :   final TransitionBuilder builder;
+<span class="lineNum">      63 </span>            : 
+<span class="lineNum">      64 </span>            :   final String title;
+<span class="lineNum">      65 </span>            : 
+<span class="lineNum">      66 </span>            :   final GenerateAppTitle onGenerateTitle;
+<span class="lineNum">      67 </span>            : 
+<span class="lineNum">      68 </span>            :   final LEThemeData theme;
+<span class="lineNum">      69 </span>            : 
+<span class="lineNum">      70 </span>            :   final Color color;
+<span class="lineNum">      71 </span>            : 
+<span class="lineNum">      72 </span>            :   final Locale locale;
+<span class="lineNum">      73 </span>            : 
+<span class="lineNum">      74 </span>            :   final Iterable&lt;LocalizationsDelegate&lt;dynamic&gt;&gt; localizationsDelegates;
+<span class="lineNum">      75 </span>            : 
+<span class="lineNum">      76 </span>            :   final LocaleListResolutionCallback localeListResolutionCallback;
+<span class="lineNum">      77 </span>            : 
+<span class="lineNum">      78 </span>            :   final LocaleResolutionCallback localeResolutionCallback;
+<span class="lineNum">      79 </span>            : 
+<span class="lineNum">      80 </span>            :   final Iterable&lt;Locale&gt; supportedLocales;
+<span class="lineNum">      81 </span>            : 
+<span class="lineNum">      82 </span>            :   final bool showPerformanceOverlay;
+<span class="lineNum">      83 </span>            : 
+<span class="lineNum">      84 </span>            :   final bool checkerboardRasterCacheImages;
+<span class="lineNum">      85 </span>            : 
+<span class="lineNum">      86 </span>            :   final bool checkerboardOffscreenLayers;
+<span class="lineNum">      87 </span>            : 
+<span class="lineNum">      88 </span>            :   final bool showSemanticsDebugger;
+<span class="lineNum">      89 </span>            : 
+<span class="lineNum">      90 </span>            :   final bool debugShowCheckedModeBanner;
+<span class="lineNum">      91 </span>            : 
+<span class="lineNum">      92 </span><span class="lineCov">          9 :   @override</span>
+<span class="lineNum">      93 </span><span class="lineCov">          9 :   _LEAppState createState() =&gt; _LEAppState();</span>
+<span class="lineNum">      94 </span>            : }
+<span class="lineNum">      95 </span>            : 
+<span class="lineNum">      96 </span>            : class _LEScrollBehavior extends ScrollBehavior {
+<span class="lineNum">      97 </span><span class="lineCov">          1 :   @override</span>
+<span class="lineNum">      98 </span>            :   Widget buildViewportChrome(
+<span class="lineNum">      99 </span>            :       BuildContext context, Widget child, AxisDirection axisDirection) {
+<span class="lineNum">     100 </span>            :     return child;
+<span class="lineNum">     101 </span>            :   }
+<span class="lineNum">     102 </span>            : 
+<span class="lineNum">     103 </span><span class="lineCov">          1 :   @override</span>
+<span class="lineNum">     104 </span>            :   ScrollPhysics getScrollPhysics(BuildContext context) {
+<span class="lineNum">     105 </span>            :     return const BouncingScrollPhysics();
+<span class="lineNum">     106 </span>            :   }
+<span class="lineNum">     107 </span>            : }
+<span class="lineNum">     108 </span>            : 
+<span class="lineNum">     109 </span>            : class _LEAppState extends State&lt;LEApp&gt; {
+<span class="lineNum">     110 </span>            :   HeroController _heroController;
+<span class="lineNum">     111 </span>            :   List&lt;NavigatorObserver&gt; _navigatorObservers;
+<span class="lineNum">     112 </span>            : 
+<span class="lineNum">     113 </span><span class="lineCov">          9 :   @override</span>
+<span class="lineNum">     114 </span>            :   void initState() {
+<span class="lineNum">     115 </span><span class="lineCov">          9 :     super.initState();</span>
+<span class="lineNum">     116 </span><span class="lineCov">         18 :     _heroController = HeroController();</span>
+<span class="lineNum">     117 </span><span class="lineCov">          9 :     _updateNavigator();</span>
+<span class="lineNum">     118 </span>            :   }
+<span class="lineNum">     119 </span>            : 
+<span class="lineNum">     120 </span><span class="lineNoCov">          0 :   @override</span>
+<span class="lineNum">     121 </span>            :   void didUpdateWidget(LEApp oldWidget) {
+<span class="lineNum">     122 </span><span class="lineNoCov">          0 :     super.didUpdateWidget(oldWidget);</span>
+<span class="lineNum">     123 </span><span class="lineNoCov">          0 :     if (widget.navigatorKey != oldWidget.navigatorKey) {</span>
+<span class="lineNum">     124 </span>            :       // If the navigator changes, we have to create a new
+<span class="lineNum">     125 </span>            :       // [_heroController](observer), because the old Navigator
+<span class="lineNum">     126 </span>            :       // won't be disposed until after the new one has been
+<span class="lineNum">     127 </span>            :       // created (because the Navigator has a GlobalKey).
+<span class="lineNum">     128 </span><span class="lineNoCov">          0 :       _heroController = HeroController();</span>
+<span class="lineNum">     129 </span>            :     }
+<span class="lineNum">     130 </span><span class="lineNoCov">          0 :     _updateNavigator();</span>
+<span class="lineNum">     131 </span>            :   }
+<span class="lineNum">     132 </span>            : 
+<span class="lineNum">     133 </span><span class="lineCov">          9 :   void _updateNavigator() {</span>
+<span class="lineNum">     134 </span><span class="lineCov">         18 :     if (widget.home != null ||</span>
+<span class="lineNum">     135 </span><span class="lineNoCov">          0 :         widget.routes.isNotEmpty ||</span>
+<span class="lineNum">     136 </span><span class="lineNoCov">          0 :         widget.onGenerateRoute != null ||</span>
+<span class="lineNum">     137 </span><span class="lineNoCov">          0 :         widget.onUnknownRoute != null) {</span>
+<span class="lineNum">     138 </span><span class="lineCov">         18 :       _navigatorObservers =</span>
+<span class="lineNum">     139 </span><span class="lineCov">         18 :           List&lt;NavigatorObserver&gt;.from(widget.navigatorObservers)</span>
+<span class="lineNum">     140 </span><span class="lineCov">         18 :             ..add(_heroController);</span>
+<span class="lineNum">     141 </span>            :     } else {
+<span class="lineNum">     142 </span><span class="lineNoCov">          0 :       _navigatorObservers = const &lt;NavigatorObserver&gt;[];</span>
+<span class="lineNum">     143 </span>            :     }
+<span class="lineNum">     144 </span>            :   }
+<span class="lineNum">     145 </span>            : 
+<span class="lineNum">     146 </span><span class="lineCov">          9 :   Iterable&lt;LocalizationsDelegate&lt;dynamic&gt;&gt; get _localizationsDelegates sync* {</span>
+<span class="lineNum">     147 </span><span class="lineCov">         18 :     if (widget.localizationsDelegates != null)</span>
+<span class="lineNum">     148 </span><span class="lineNoCov">          0 :       yield* widget.localizationsDelegates;</span>
+<span class="lineNum">     149 </span>            :     // TODO: Add default LE localizations delegate.
+<span class="lineNum">     150 </span>            :   }
+<span class="lineNum">     151 </span>            : 
+<span class="lineNum">     152 </span><span class="lineCov">          9 :   Widget _buildApp() {</span>
+<span class="lineNum">     153 </span><span class="lineCov">          9 :     return ScrollConfiguration(</span>
+<span class="lineNum">     154 </span><span class="lineCov">          9 :       behavior: _LEScrollBehavior(),</span>
+<span class="lineNum">     155 </span><span class="lineCov">          9 :       child: LETheme(</span>
+<span class="lineNum">     156 </span><span class="lineCov">         18 :         themeData: widget.theme ?? const LEThemeData(),</span>
+<span class="lineNum">     157 </span><span class="lineCov">          9 :         child: WidgetsApp(</span>
+<span class="lineNum">     158 </span><span class="lineCov">          9 :           key: GlobalObjectKey(this),</span>
+<span class="lineNum">     159 </span><span class="lineCov">         18 :           navigatorKey: widget.navigatorKey,</span>
+<span class="lineNum">     160 </span><span class="lineCov">          9 :           navigatorObservers: _navigatorObservers,</span>
+<span class="lineNum">     161 </span>            :           pageRouteBuilder:
+<span class="lineNum">     162 </span><span class="lineCov">          9 :               &lt;T&gt;(RouteSettings settings, WidgetBuilder builder) =&gt;</span>
+<span class="lineNum">     163 </span><span class="lineCov">          9 :                   LEPageRoute&lt;T&gt;(settings: settings, builder: builder),</span>
+<span class="lineNum">     164 </span><span class="lineCov">         18 :           home: widget.home,</span>
+<span class="lineNum">     165 </span><span class="lineCov">         18 :           routes: widget.routes,</span>
+<span class="lineNum">     166 </span><span class="lineCov">         18 :           initialRoute: widget.initialRoute,</span>
+<span class="lineNum">     167 </span><span class="lineCov">         18 :           onGenerateRoute: widget.onGenerateRoute,</span>
+<span class="lineNum">     168 </span><span class="lineCov">         18 :           onUnknownRoute: widget.onUnknownRoute,</span>
+<span class="lineNum">     169 </span><span class="lineCov">         18 :           builder: widget.builder,</span>
+<span class="lineNum">     170 </span><span class="lineCov">         18 :           title: widget.title,</span>
+<span class="lineNum">     171 </span><span class="lineCov">         18 :           onGenerateTitle: widget.onGenerateTitle,</span>
+<span class="lineNum">     172 </span>            :           textStyle: _defaultTextStyle,
+<span class="lineNum">     173 </span>            :           // TODO: Check if the color is equal to the accent color.
+<span class="lineNum">     174 </span><span class="lineCov">         20 :           color: widget.theme?.style?.identifierAccent ??</span>
+<span class="lineNum">     175 </span><span class="lineCov">          9 :               const LEStyle().identifierAccent,</span>
+<span class="lineNum">     176 </span><span class="lineCov">         18 :           locale: widget.locale,</span>
+<span class="lineNum">     177 </span><span class="lineCov">          9 :           localizationsDelegates: _localizationsDelegates,</span>
+<span class="lineNum">     178 </span><span class="lineCov">         18 :           localeResolutionCallback: widget.localeResolutionCallback,</span>
+<span class="lineNum">     179 </span><span class="lineCov">         18 :           localeListResolutionCallback: widget.localeListResolutionCallback,</span>
+<span class="lineNum">     180 </span><span class="lineCov">         18 :           supportedLocales: widget.supportedLocales,</span>
+<span class="lineNum">     181 </span><span class="lineCov">         18 :           showPerformanceOverlay: widget.showPerformanceOverlay,</span>
+<span class="lineNum">     182 </span><span class="lineCov">         18 :           checkerboardRasterCacheImages: widget.checkerboardRasterCacheImages,</span>
+<span class="lineNum">     183 </span><span class="lineCov">         18 :           checkerboardOffscreenLayers: widget.checkerboardOffscreenLayers,</span>
+<span class="lineNum">     184 </span><span class="lineCov">         18 :           showSemanticsDebugger: widget.showSemanticsDebugger,</span>
+<span class="lineNum">     185 </span><span class="lineCov">         18 :           debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner,</span>
+<span class="lineNum">     186 </span>            :           // TODO: Add inspectorSelectButtonBuilder value.
+<span class="lineNum">     187 </span>            :         ),
+<span class="lineNum">     188 </span>            :       ),
+<span class="lineNum">     189 </span>            :     );
+<span class="lineNum">     190 </span>            :   }
+<span class="lineNum">     191 </span>            : 
+<span class="lineNum">     192 </span><span class="lineCov">          9 :   @override</span>
+<span class="lineNum">     193 </span>            :   Widget build(BuildContext context) {
+<span class="lineNum">     194 </span><span class="lineCov">          9 :     return _buildApp();</span>
+<span class="lineNum">     195 </span>            :   }
+<span class="lineNum">     196 </span>            : }
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

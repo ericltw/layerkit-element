@@ -1,0 +1,5 @@
+enum TextButtonSize {
+  small,
+
+  large,
+}

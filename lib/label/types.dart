@@ -1,0 +1,5 @@
+enum LabelSize {
+  small,
+
+  medium,
+}
